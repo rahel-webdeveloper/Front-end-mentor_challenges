@@ -1,0 +1,244 @@
+/* ## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%) */
+
+:root {
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Grayish-Blue: hsl(234, 15%, 60%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+@font-face {
+    font-family: inter;
+    src: url(./fonts/static/Inter-Bold.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    /* background-position-x: 17rem, -11rem; */
+    background-repeat: no-repeat;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--Very-Light-Grayish-Blue);
+    font-family: inter;
+    padding: 1rem;
+}
+
+
+
+header {
+    display: grid;
+    place-items: center;
+}
+
+header h3 {
+    font-size: 1.7rem;
+    margin-block: 2rem;
+    color: var(--Grayish-Blue);
+}
+
+header .price_toggle {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    color: var(--Light-Grayish-Blue);
+}
+
+header .price_toggle p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(237, 63%, 64%);
+    transition: .4s;
+    border-radius: 30px;
+}
+ .slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    top: 3px;
+    left: 4px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    transition: .4s;
+}
+.switch input:checked + .slider{
+    background-color:  hsl(236, 72%, 79%);
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.components {
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
+    gap: 1.3rem 0;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.pricing_component {
+    background-color: white;
+    display: grid;
+    place-items: center;
+    max-width: 22rem;
+    width: 100%;
+    padding: 1.7rem;
+    border-radius: 7px;
+    box-shadow: 7px 13px 30px hsla(232, 13%, 33%, 0.164);
+    transition: all .7s;
+}
+
+
+.pricing_component .grade {
+    font-size: 1.25rem;
+    color: var(--Grayish-Blue);
+}
+
+.pricing_component .price {
+    font-size: 4rem;
+    color: var(--Dark-Grayish-Blue);
+    letter-spacing: -4px;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.pricing_component .price small {
+    font-size: 2.3rem;
+    margin-right: .5rem;
+}
+
+.pricing_component .pricing_features {
+    width: 100%;
+    font-size: .9rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--Grayish-Blue);
+}
+
+.pricing_component .pricing_features p {
+    padding: 1rem;
+    border-bottom: 1px solid hsl(235, 63%, 93%);
+}
+
+.pricing_component .pricing_features p:nth-child(1) {
+    border-top: 1px solid hsl(235, 63%, 93%);
+}
+
+.pricing_component button {
+    width: 100%;
+    margin-top: 2.22rem;
+    outline: none;
+    font-size: .77rem;
+    padding: .77rem 2rem;
+    font-family: inter;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--Very-Light-Grayish-Blue);
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.pricing_component:nth-child(2) {
+    background: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.pricing_component:nth-child(2) .price {
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.pricing_component:nth-child(2) .grade {
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.pricing_component:nth-child(2) .pricing_features p {
+    color: var(--Very-Light-Grayish-Blue);
+    border-color: hsl(236, 72%, 79%);
+}
+
+.pricing_component:nth-child(2) button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.pricing_component:nth-child(2) button:hover {
+    color: white;
+    border-color: white;
+}
+
+.pricing_component button:hover {
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid var(--Dark-Grayish-Blue);
+}
+
+@media screen and (width >= 486px) {
+    body {
+        padding-inline: 2rem;
+    }
+    .pricing_component {
+        max-width: 30rem;
+    }
+}
+
+@media screen and (width >= 850px) {
+    body {
+        background-position: top right, bottom left;
+    }
+    .components {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .pricing_component {
+        max-width: 22rem;
+    }
+    .pricing_component:nth-child(2) {
+        padding-block: 3.5rem;
+    }
+}
