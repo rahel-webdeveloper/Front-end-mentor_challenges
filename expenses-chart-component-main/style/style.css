@@ -1,0 +1,174 @@
+:root {
+    /* ### Primary */
+    --Light-red: hsl(10, 82%, 72%);
+    --Soft-red: hsl(10, 79%, 65%);
+    --Light-Cyan: hsl(187, 41%, 69%);
+    --Cyan: hsl(186, 34%, 60%);
+
+    /* ### Neutral */
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+
+}
+
+@font-face {
+    font-family: inRe;
+    src: url(fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: inBo;
+    src: url(fonts/static/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: inSe;
+    src: url(fonts/static/Inter-SemiBold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .2s ease;
+}
+
+body {
+    padding: 1.7rem;
+    background-color: var(--Cream);
+    font-family: inRe;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p {
+    font-family: inRe;
+    font-size: .7rem;
+}
+
+.top {
+    background-color: var(--Soft-red);
+    width: 355px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .7rem;
+}
+
+.top img {
+    width: 15%;
+}
+
+.top .balance {
+    color: var(--Very-pale-orange);
+    font-family: inRe;
+}
+
+.top .balance h2 {
+    margin-top: .5rem;
+    font-size: 1.3rem;
+}
+
+.bottom {
+    background-color: var(--Very-pale-orange);
+    width: 355px;
+    margin-top: 1rem;
+    padding: 1.7rem;
+    border-radius: .7rem;
+    color: var(--Dark-brown);
+}
+
+.bottom h2 {
+    font-size: 1.3rem;
+}
+
+.bottom .total {
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--Cream);
+    margin-top: 1.3rem;
+}
+
+.bottom .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bottom .total p {
+    color: var(--Medium-brown);
+}
+
+.total .this-month h1 {
+    font-size: 1.9rem;
+}
+
+.bottom .total .last-month {
+    text-align: end;
+}
+
+.this-month h1, .last-month p {
+    margin-top: .1rem;
+}
+
+.total .last-month span {
+    font-weight: 700;
+    font-size: .77rem;
+}
+
+.last-month .this-week {
+    margin-bottom: .3rem;
+}
+
+.last-month .this-week span {
+    font-family: inRe;
+    font-size: 1rem;
+    color: var(--Cyan);
+}
+
+.myCharts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+    margin-top: 1.3rem;
+    color: var(--Medium-brown);
+}
+
+.myCharts div {
+    display: grid;
+    place-items: center;
+    row-gap: .4rem;
+}
+
+.myCharts .amount {
+    font-size: .7rem;
+    color: var(--Very-pale-orange);
+    border-radius: 3px;
+    padding: .3rem .3rem;
+    background-color: var(--Dark-brown);
+    opacity: 0;
+}
+
+.chart {
+    width: 2rem;
+    height: 6rem;
+    border-radius: 3px;
+    background-color: var(--Soft-red);
+    cursor: pointer;
+}
+
+.myCharts #highChart{
+    background-color: var(--Cyan);
+}
+
+.myCharts #highChart:hover {
+    background-color: var(--Light-Cyan);
+}
+
+.chart:hover {
+    background-color: var(--Light-red);
+}
