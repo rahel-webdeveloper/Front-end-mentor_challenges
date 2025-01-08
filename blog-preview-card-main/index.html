@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      /* Primary  */
+      --Yellow: hsl(47, 88%, 63%);
+
+      /*   Neutral  */
+      --White: hsl(0, 0%, 100%);
+      --Grey: hsl(0, 0%, 50%);
+      --Black: hsl(0, 0%, 7%);
+
+      /*  Paragraph Font Size */
+      --paragraph-size: 16px;
+    }
+    @font-face {
+      font-family: pro;
+      src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: ;
+    }
+    main {
+      font-family: pro;
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      color: var(--Black);
+      background-color: var(--Yellow);
+    }
+    .preview{
+      width: 320px;
+      background-color: var(--White);
+      border: 1px solid var(--Black);
+      border-radius: var(--paragraph-size);
+      padding: 1rem;
+      box-shadow: 5px 5px 0 var(--Black);
+    }
+    .preview:hover {
+      transition: box-shadow .4s ease;
+      box-shadow: 10px 10px 0 var(--Black);
+    }
+    .preview .header-img {
+      width: 100%;
+    }
+    .preview .header-img img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--paragraph-size);
+    }
+    .body {
+      margin-top: var(--paragraph-size);
+    }
+    .body h5 {
+      display: inline;
+      text-align: center;
+      background-color: var(--Yellow);
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: var(--paragraph-size);
+      cursor: pointer;
+    }
+    .body > span, .body h2, .paragraph{
+      margin-top: 1rem;
+    }
+    .body > span{
+      font-size: var(--paragraph-size);
+      font-weight: 500;
+      display: block;
+    }
+    .body h2 {
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color .2s ease;
+    }
+    .body h2:hover {
+      color: var(--Yellow);
+    }
+    .body .paragraph {
+      font-size: var(--paragraph-size);
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      column-gap: 0.7rem;
+      margin-top: 1.7rem;
+    }
+    .footer img {
+      width: 35px;
+      height: 35px;
+    }
+    .footer span {
+      font-weight: 800;
+    }
+    .footer img, .footer span {
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="preview">
+      <div class="header-img">
+        <img src="assets/images/illustration-article.svg" alt="">
+      </div>
+      <div class="body">
+        <h5>Learning</h5>
+
+        <span>Published 21 Dec 2023</span>
+
+        <h2>HTML & CSS foundations</h2>
+        <div class="paragraph">
+          <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="assets/images/image-avatar.webp" alt="">
+        <span>Greg Hooper</span>
+      </div>
+    </div>
+  </main>
+  
+</body>
+</html>
