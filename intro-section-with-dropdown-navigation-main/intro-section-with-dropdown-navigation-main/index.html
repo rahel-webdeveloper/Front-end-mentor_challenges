@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/Rahel_Vertival_Dark_Logo.png">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/all.css">
+  <title>Intro section with dropdown  navigation</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <div class="logo">
+        <h2>RAHEL</h2>
+      </div>
+
+        <img src="images/icon-menu.svg" class="menu-btn" alt="">
+
+      <nav class="navbar hidden">
+        <img src="images/icon-close-menu.svg" class="close-btn hidden" alt="">
+       
+        <div class="nav-list">
+
+          <ul class="flex">
+            <li class="dropdown-btn">
+              <span class="dropwon">Features</span>
+              <i class="fa-solid fa-angle-down"></i>
+
+              <div class="dropdown-list first flex hidden">
+                  <div class="list-item flex">
+                    <img src="images/icon-todo.svg" alt="">
+                    <span>Todo List</span>
+                  </div>
+
+                  <div class="list-item flex">
+                    <img src="images/icon-calendar.svg" alt="">
+                    <span>Calender</span>
+                  </div>
+
+                  <div class="list-item flex">
+                    <img src="images/icon-reminders.svg" alt="">
+                    <span>Reminder</span>
+                  </div>
+
+                  <div class="list-item flex">
+                    <img src="images/icon-planning.svg" alt="">
+                    <span>Planning</span>
+                  </div>
+
+              </div>
+            </li>
+
+            <li class="dropdown-btn">
+              <span class="dropwon">Company</span>
+              <i class="fa-solid fa-angle-down"></i>
+              <div class="dropdown-list second flex hidden">
+                  <span>History</span>
+                  <span>Our Team</span>
+                  <span>Blog</span>
+              </div>
+            </li>
+
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+
+          <div class="flex login-btn">
+            <button>Login</button>
+            <button>Register</button>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+
+
+    <main class="main-section flex">
+      <article class="article flex">
+        <h1>Make <br> remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.</p>
+        <button class="learn-more">Learn more</button>
+
+        <footer class="footer">
+          <div class="companies">
+            <img src="images/client-databiz.svg" alt="">
+            <img src="images/client-audiophile.svg" alt="">
+            <img src="images/client-meet.svg" alt="">
+            <img src="images/client-maker.svg" alt="">
+          </div>
+         </footer>
+      </article>
+
+      <aside class="aside-img">
+         <img src="images/img-hero.png" alt="">
+      </aside>
+      </main>
+  </div>
+
+  <script src="JS/app.js"></script>
+</body>
+</html>
