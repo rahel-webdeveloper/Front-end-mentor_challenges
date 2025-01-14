@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <style>
+    :root {
+      --Green: hsl(75, 94%, 57%);
+      --White: hsl(0, 0%, 100%);
+      --Grey: hsl(0, 0%, 20%);
+      --Dark-Grey: hsl(0, 0%, 12%);
+      --Off-Black: hsl(0, 0%, 8%);
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    }
+    body {
+      background-color: var(--Off-Black);
+      font-family: Inter;
+    }
+    .container {
+      margin: 7rem auto;
+      max-width: 350px;
+      background-color: var(--Dark-Grey);
+      display: grid;
+      padding: 2rem;
+      border-radius: 1rem;
+      color: var(--White);
+    }
+    .container > img {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin: 0 auto 0 auto;
+      border-radius: 50%;
+    }
+    .name {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .name h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .name h5 {
+      margin-top: 0.5rem;
+      color: var(--Green);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    p {
+      text-align: center;
+      margin-top: 1.7rem;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .buttons {
+      display: grid;
+      margin-top: 1.7rem;
+      row-gap: 0.7rem;
+    }
+    .buttons button {
+      padding: 0.8rem 1.3rem;
+      border-radius: 0.5rem;
+      outline: none;
+      border: none;
+      color: var(--White);
+      background-color: var(--Grey);
+      font-family: Inter;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .buttons button:hover {
+      background-color: var(--Green);
+      color: var(--Off-Black);
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+      <img src="assets/images/avatar-jessica.jpeg" alt="">
+
+    <div class="name">
+      <h2>Jessica Randall</h2>
+      <h5>London, United Kingdom</h5>
+    </div>
+
+    <p>"Front-end developer and avid reader."</p>
+
+    <div class="buttons">
+      <button>GitHub</button>
+      <button>Frontend Mentor</button>
+      <button>LinkedIn</button>
+      <button>Twitter</button>
+      <button>Instagram</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
